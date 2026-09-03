@@ -6,12 +6,12 @@ The goal of this repository is to understand **how core ML algorithms work inter
 
 ## Algorithms
 
-| #  | Algorithm           |   |   |
-| -- | ------------------- | - | - |
-| 01 | Linear Regression   |   |   |
-| 02 | Logistic Regression |   |   |
-| 03 | K-Nearest Neighbors |   |   |
-| 04 | Decision Tree       |   |   |
+| #  | Algorithm           |
+| -- | ------------------- |
+| 01 | Linear Regression   |
+| 02 | Logistic Regression |
+| 03 | K-Nearest Neighbors |
+| 04 | Decision Tree       |
 
 ## Repository Structure
 
