@@ -12,6 +12,7 @@ The goal of this repository is to understand **how core ML algorithms work inter
 | 02 | Logistic Regression |
 | 03 | K-Nearest Neighbors |
 | 04 | Decision Tree       |
+| 05 | K-Means Clustering  |
 
 ## Repository Structure
 
@@ -28,7 +29,10 @@ Machine-Learning/
 ├── 06-knn-sklearn/
 │
 ├── 07-decision-tree-from-scratch/
-└── 08-decision-tree-sklearn/
+├── 08-decision-tree-sklearn/
+│
+├── 09-k-means-from-scratch/
+└── 10-k-means-sklearn/
 ```
 
 ## Implementations
@@ -105,6 +109,23 @@ Concepts covered:
 
 The implementation is compared against Scikit-learn's `DecisionTreeClassifier`.
 
+---
+
+### 5. K-Means Clustering
+
+Implemented K-Means clustering from scratch using NumPy.
+
+Concepts covered:
+
+* Cluster initialization
+* Euclidean distance
+* Assignment step
+* Centroid update step
+* Iterative convergence
+* Inertia / clustering objective
+
+The implementation is compared against Scikit-learn's `KMeans`.
+
 ## From Scratch vs Scikit-learn
 
 Each algorithm is implemented in two ways:
@@ -166,7 +187,6 @@ The Scikit-learn implementations are then used to connect that theoretical under
 
 Planned topics for this learning journey include:
 
-* K-Means
 * Random Forest
 * Naive Bayes
 * Support Vector Machines
