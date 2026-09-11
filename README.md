@@ -30,6 +30,8 @@ Each algorithm folder contains a short README, runnable notebooks or scripts, vi
 
 ## Algorithms
 
+This repository has expanded beyond the original five examples — recent additions include Scikit-learn examples for Random Forest and Naive Bayes. The table below lists the available folders and which approach they contain.
+
 | #  | Algorithm                | From Scratch | Scikit-learn |
 | -- | ------------------------ | :----------: | :----------: |
 | 01 | Linear Regression        | 01-linear-regression-from-scratch/ | 02-linear-regression-sklearn/ |
@@ -37,6 +39,8 @@ Each algorithm folder contains a short README, runnable notebooks or scripts, vi
 | 03 | K-Nearest Neighbors      | 05-knn-from-scratch/ | 06-knn-sklearn/ |
 | 04 | Decision Tree            | 07-decision-tree-from-scratch/ | 08-decision-tree-sklearn/ |
 | 05 | K-Means Clustering       | 09-k-means-from-scratch/ | 10-k-means-sklearn/ |
+| 11 | Random Forest            | - | 11-random-forest-sklearn/ |
+| 12 | Naive Bayes              | - | 12-naive-bayes-sklearn/ |
 
 ## Repository Structure
 
@@ -56,7 +60,10 @@ Machine-Learning/
 ├── 08-decision-tree-sklearn/
 │
 ├── 09-k-means-from-scratch/
-└── 10-k-means-sklearn/
+├── 10-k-means-sklearn/
+│
+├── 11-random-forest-sklearn/
+├── 12-naive-bayes-sklearn/
 ```
 
 ## Implementations
@@ -162,6 +169,37 @@ Concepts covered:
 
 The implementation is compared against Scikit-learn's `KMeans`.
 
+---
+
+## Random Forest (Scikit-learn example)
+
+A Scikit-learn example implementing Random Forest classification/regression using `RandomForestClassifier` / `RandomForestRegressor`.
+
+Concepts covered:
+
+- Ensemble learning
+- Bagging
+- Feature importance
+- Hyperparameter tuning (n_estimators, max_depth)
+- Out-of-bag evaluation (where applicable)
+
+See `11-random-forest-sklearn/` for notebook and example scripts.
+
+---
+
+## Naive Bayes (Scikit-learn example)
+
+A Scikit-learn example demonstrating Naive Bayes classifiers (`GaussianNB`, `MultinomialNB` where applicable).
+
+Concepts covered:
+
+- Bayes theorem and conditional independence assumption
+- Gaussian vs Multinomial vs Bernoulli variants
+- Probabilistic predictions
+- Use cases and limitations
+
+See `12-naive-bayes-sklearn/` for notebook and example scripts.
+
 ## Technologies
 
 - Python 3.8+
@@ -218,8 +256,6 @@ This repository focuses on building strong foundations in:
 
 Planned topics for this learning journey include:
 
-- Random Forest
-- Naive Bayes
 - Support Vector Machines
 - Principal Component Analysis
 - Gradient Boosting
