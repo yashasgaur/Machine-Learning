@@ -2,13 +2,13 @@
 
 [![Python](https://img.shields.io/badge/python-%3E%3D3.8-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Requirements](https://img.shields.io/badge/requirements-.txt-lightgrey)](requirements.txt)
 
-A hands-on implementation of fundamental Machine Learning algorithms, built from first principles using Python and NumPy and then compared with their Scikit-learn equivalents.
-
-The goal of this repository is to understand **how core ML algorithms work internally**, rather than treating them as black-box library functions.
+A hands-on collection of fundamental Machine Learning algorithms implemented from first principles with NumPy and Python, alongside concise Scikit-learn examples. This repository is designed to demonstrate your understanding of algorithm internals and to serve as a portfolio project for interviews and resumes.
 
 ## Table of Contents
 
+- [About](#about)
 - [Algorithms](#algorithms)
 - [Repository Structure](#repository-structure)
 - [Implementations](#implementations)
@@ -17,12 +17,18 @@ The goal of this repository is to understand **how core ML algorithms work inter
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Learning Focus](#learning-focus)
-- [Future Learning](#future-learning)
-- [Author](#author)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author / Contact](#author--contact)
+
+## About
+
+This repo contains clear, well-documented implementations of classic ML algorithms. Each algorithm includes a "from-scratch" implementation (NumPy + Python) to explain the math and mechanics, plus a short Scikit-learn example to show the standard industry API and to validate results.
+
+Each algorithm folder contains a short README, runnable notebooks or scripts, visualizations (where applicable), and a concise comparison section showing how the from-scratch output compares to Scikit-learn.
 
 ## Algorithms
-
-This repo contains the following algorithms (each implemented from-scratch and with a Scikit-learn example where applicable):
 
 | #  | Algorithm                | From Scratch | Scikit-learn |
 | -- | ------------------------ | :----------: | :----------: |
@@ -55,115 +61,115 @@ Machine-Learning/
 
 ## Implementations
 
-Each algorithm implementation includes a `notebook` or `script` demonstrating the algorithm, visualizations (where applicable), and a comparison with Scikit-learn's implementation.
+Each algorithm implementation includes a concise Jupyter notebook or script demonstrating the algorithm, visualizations (where applicable), and a short comparison with Scikit-learn's implementation.
 
 ### From Scratch
 
-The core mathematical and algorithmic logic is implemented manually using NumPy and Python. This is intended to develop an understanding of how the algorithm works internally, how parameters are updated during training, and how predictions are generated.
+The core mathematical and algorithmic logic is implemented using NumPy and Python. This is intended to help you understand how the algorithm works internally and how hyperparameters affect behavior.
 
 ### Scikit-learn
 
-The corresponding Scikit-learn implementation shows the standard API usage and provides a practical comparison to the from-scratch code.
+The corresponding Scikit-learn examples show the standard API usage and provide a practical comparison to the from-scratch code.
 
 ---
 
-### Linear Regression
+## Linear Regression
 
 Implemented Linear Regression from first principles using NumPy.
 
 Concepts covered:
 
-* Hypothesis function
-* Mean Squared Error
-* Cost function
-* Gradient Descent
-* Learning Rate
-* Feature Scaling
-* Training over multiple epochs
-* Cost convergence
+- Hypothesis function
+- Mean Squared Error
+- Cost function
+- Gradient Descent
+- Learning Rate
+- Feature Scaling
+- Training over multiple epochs
+- Cost convergence
 
 The implementation is compared against Scikit-learn's `LinearRegression` implementation.
 
 ---
 
-### Logistic Regression
+## Logistic Regression
 
 Implemented binary Logistic Regression from scratch.
 
 Concepts covered:
 
-* Linear decision function
-* Sigmoid activation
-* Log Loss / Binary Cross-Entropy
-* Gradient Descent
-* Feature Scaling
-* Probability estimation
-* Classification threshold
-* Confusion Matrix
-* Precision, Recall and F1-score
+- Linear decision function
+- Sigmoid activation
+- Log Loss / Binary Cross-Entropy
+- Gradient Descent
+- Feature Scaling
+- Probability estimation
+- Classification threshold
+- Confusion Matrix
+- Precision, Recall and F1-score
 
 The implementation is validated against Scikit-learn's `LogisticRegression`.
 
 ---
 
-### K-Nearest Neighbors
+## K-Nearest Neighbors
 
 Implemented KNN without using a machine-learning library for the core algorithm.
 
 Concepts covered:
 
-* Euclidean distance
-* Nearest-neighbor selection
-* Choosing K
-* Majority voting
-* Feature scaling
-* Classification
+- Euclidean distance
+- Nearest-neighbor selection
+- Choosing K
+- Majority voting
+- Feature scaling
+- Classification
 
 The implementation is compared with Scikit-learn's `KNeighborsClassifier`.
 
 ---
 
-### Decision Tree
+## Decision Tree
 
 Implemented a Decision Tree classifier from scratch.
 
 Concepts covered:
 
-* Recursive tree construction
-* Feature splitting
-* Gini impurity
-* Information gain / split quality
-* Leaf nodes
-* Prediction through tree traversal
-* Stopping conditions
+- Recursive tree construction
+- Feature splitting
+- Gini impurity
+- Information gain / split quality
+- Leaf nodes
+- Prediction through tree traversal
+- Stopping conditions
 
 The implementation is compared against Scikit-learn's `DecisionTreeClassifier`.
 
 ---
 
-### K-Means Clustering
+## K-Means Clustering
 
 Implemented K-Means clustering from scratch using NumPy.
 
 Concepts covered:
 
-* Cluster initialization
-* Euclidean distance
-* Assignment step
-* Centroid update step
-* Iterative convergence
-* Inertia / clustering objective
+- Cluster initialization
+- Euclidean distance
+- Assignment step
+- Centroid update step
+- Iterative convergence
+- Inertia / clustering objective
 
 The implementation is compared against Scikit-learn's `KMeans`.
 
 ## Technologies
 
-* Python
-* NumPy
-* Pandas
-* Matplotlib
-* Scikit-learn
-* Jupyter Notebook
+- Python 3.8+
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- Jupyter Notebook
 
 ## Usage
 
@@ -181,43 +187,62 @@ source .venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
 ```
 
-3. Open the notebooks in Jupyter or run the example scripts in each folder.
+3. Run notebooks:
+
+```bash
+jupyter notebook
+# then open the notebook files under each algorithm folder
+```
+
+4. Or run example scripts (where provided):
+
+```bash
+python 01-linear-regression-from-scratch/example.py
+```
 
 ## Learning Focus
 
 This repository focuses on building strong foundations in:
 
-* Supervised Learning
-* Regression
-* Classification
-* Optimization
-* Gradient Descent
-* Feature Scaling
-* Model Evaluation
-* Algorithmic Thinking
-* Understanding ML implementations
+- Supervised Learning
+- Regression
+- Classification
+- Optimization
+- Gradient Descent
+- Feature Scaling
+- Model Evaluation
+- Algorithmic Thinking
+- Understanding ML implementations
 
-## Why From Scratch?
-
-Machine-learning libraries make model training extremely convenient, but they can hide the underlying mechanics. Implementing these algorithms from scratch helps understand what happens behind APIs such as:
-
-```python
-model.fit(X_train, y_train)
-```
-
-The Scikit-learn implementations are then used to connect that theoretical understanding with standard industry tooling.
-
-## Future Learning
+## Roadmap
 
 Planned topics for this learning journey include:
 
-* Random Forest
-* Naive Bayes
-* Support Vector Machines
-* Principal Component Analysis
-* Gradient Boosting
+- Random Forest
+- Naive Bayes
+- Support Vector Machines
+- Principal Component Analysis
+- Gradient Boosting
 
 ---
 
-**Author:** Yashas Gaur  
+## Contributing
+
+Contributions are welcome. If you want to:
+
+- Open an issue for a bug or enhancement
+- Suggest new algorithms or improvements
+- Send a pull request with tests and a short description
+
+Please follow standard GitHub contribution workflows.
+
+## License
+
+This repository is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author / Contact
+
+**Author:** Yashas Gaur
 **GitHub:** https://github.com/yashasgaur
+
+If you'd like a specific resume blurb, LinkedIn, or email added to the README, tell me and I'll include it.
