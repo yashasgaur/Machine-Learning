@@ -1,13 +1,11 @@
 # Machine Learning — From Scratch & Scikit-learn
-
+ 
 [![Python](https://img.shields.io/badge/python-%3E%3D3.8-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Requirements](https://img.shields.io/badge/requirements-.txt-lightgrey)](requirements.txt)
-
-A hands-on collection of fundamental machine learning algorithms implemented from first principles with NumPy and Python, alongside concise scikit-learn examples. This repository is designed to help you understand the math, intuition, and code behind core ML techniques while also showing how the industry-standard library implements them.
-
+ 
+A hands-on collection of fundamental machine learning algorithms implemented from first principles with NumPy and Python, alongside concise scikit-learn (and XGBoost/LightGBM) examples. This repository is designed to help you understand the math, intuition, and code behind core ML techniques while also showing how the industry-standard libraries implement them.
+ 
 ## Table of Contents
-
+ 
 - [Overview](#overview)
 - [Algorithms Included](#algorithms-included)
 - [Repository Layout](#repository-layout)
@@ -15,146 +13,103 @@ A hands-on collection of fundamental machine learning algorithms implemented fro
 - [What You'll Learn](#what-youll-learn)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [License](#license)
 - [Author / Contact](#author--contact)
-
 ## Overview
-
+ 
 This repo contains clear, well-documented implementations of classic machine learning algorithms. Each topic includes:
-
-- A from-scratch implementation using NumPy and Python
-- A scikit-learn comparison where relevant
-- Short explanations of the underlying mathematics
-- Practical examples and visualizations where useful
-- Guidance on model behavior, assumptions, and evaluation
-
+ 
+- A from-scratch implementation using NumPy and Python (where applicable)
+- A scikit-learn (or XGBoost/LightGBM) comparison
+- A runnable `.py` script and matching Jupyter `.ipynb` notebook
+- The dataset used, included as a CSV in the same folder
 The goal is not only to provide working code, but to make the underlying concepts intuitive and easy to study.
-
+ 
 ## Algorithms Included
-
-The repository includes both foundational algorithm implementations and practical scikit-learn references.
-
-| # | Algorithm | From Scratch | scikit-learn |
+ 
+The repository includes both foundational algorithm implementations and practical library-based references.
+ 
+| # | Algorithm | From Scratch | Library |
 | -- | ------------------------ | :----------: | :----------: |
-| 01 | Linear Regression | 01-linear-regression-from-scratch/ | 02-linear-regression-sklearn/ |
-| 02 | Logistic Regression | 03-logistic-regression-from-scratch/ | 04-logistic-regression-sklearn/ |
-| 03 | K-Nearest Neighbors | 05-knn-from-scratch/ | 06-knn-sklearn/ |
-| 04 | Decision Tree | 07-decision-tree-from-scratch/ | 08-decision-tree-sklearn/ |
-| 05 | K-Means Clustering | 09-k-means-from-scratch/ | 10-k-means-sklearn/ |
-| 11 | Random Forest | - | 11-random-forest-sklearn/ |
-| 12 | Naive Bayes | - | 12-naive-bayes-sklearn/ |
-
+| 01 | Linear Regression | `01-linear-regression-from-scratch/` | `02-linear-regression-sklearn/` |
+| 02 | Logistic Regression | `03-logistic-regression-from-scratch/` | `04-logistic-regression-sklearn/` |
+| 03 | K-Nearest Neighbors | `05-knn-from-scratch/` | `06-knn-sklearn/` |
+| 04 | Decision Tree | `07-decision-tree-from-scratch/` | `08-decision-tree-sklearn/` |
+| 05 | K-Means Clustering | `09-k-means-from-scratch/` | `10-k-means-sklearn/` |
+| 06 | Random Forest | — | `11-random-forest-sklearn/` |
+| 07 | Naive Bayes | — | `12-naive-bayes-sklearn/` |
+| 08 | Support Vector Machine | — | `13-svm-sklearn/` |
+| 09 | Principal Component Analysis | — | `14-pca-sklearn/` |
+| 10 | Gradient Boosting (XGBoost & LightGBM) | — | `15-xgboost-lightgbm/` |
+| 11 | DBSCAN (vs. K-Means) | — | `16-dbscan-sklearn/` |
+ 
 ### Linear Regression
-
-Implemented from first principles using NumPy.
-
-Concepts covered:
-
-- Hypothesis function
-- Mean squared error
-- Cost function
-- Gradient descent
-- Learning rate
-- Feature scaling
-- Training over multiple epochs
-- Cost convergence
-
-This implementation is compared against scikit-learn's `LinearRegression`.
-
+ 
+Implemented from first principles using NumPy, compared against scikit-learn's `LinearRegression`.
+ 
+Concepts covered: hypothesis function, mean squared error, cost function, gradient descent, learning rate, feature scaling, training over multiple epochs, cost convergence.
+ 
 ### Logistic Regression
-
-Implemented as a binary classification model from scratch.
-
-Concepts covered:
-
-- Linear decision function
-- Sigmoid activation
-- Log loss / binary cross-entropy
-- Gradient descent
-- Feature scaling
-- Probability estimation
-- Classification threshold
-- Confusion matrix
-- Precision, recall, and F1-score
-
-This implementation is validated against scikit-learn's `LogisticRegression`.
-
+ 
+Implemented as a binary classification model from scratch, validated against scikit-learn's `LogisticRegression`.
+ 
+Concepts covered: linear decision function, sigmoid activation, log loss / binary cross-entropy, gradient descent, feature scaling, probability estimation, classification threshold, confusion matrix, precision/recall/F1-score.
+ 
 ### K-Nearest Neighbors
-
-Implemented without using a machine learning library for the core logic.
-
-Concepts covered:
-
-- Euclidean distance
-- Nearest-neighbor selection
-- Choosing K
-- Majority voting
-- Feature scaling
-- Classification
-
-This is compared with scikit-learn's `KNeighborsClassifier`.
-
+ 
+Implemented without a machine learning library for the core logic, compared with scikit-learn's `KNeighborsClassifier`.
+ 
+Concepts covered: Euclidean distance, nearest-neighbor selection, choosing K, majority voting, feature scaling, classification.
+ 
 ### Decision Tree
-
-Implemented a decision tree classifier from scratch.
-
-Concepts covered:
-
-- Recursive tree construction
-- Feature splitting
-- Gini impurity
-- Information gain / split quality
-- Leaf nodes
-- Prediction through tree traversal
-- Stopping conditions
-
-This is compared against scikit-learn's `DecisionTreeClassifier`.
-
+ 
+A decision tree classifier implemented from scratch, compared against scikit-learn's `DecisionTreeClassifier`.
+ 
+Concepts covered: recursive tree construction, feature splitting, Gini impurity, information gain / split quality, leaf nodes, prediction through tree traversal, stopping conditions.
+ 
 ### K-Means Clustering
-
-Implemented clustering from scratch using NumPy.
-
-Concepts covered:
-
-- Cluster initialization
-- Euclidean distance
-- Assignment step
-- Centroid update step
-- Iterative convergence
-- Inertia / clustering objective
-
-This is compared against scikit-learn's `KMeans`.
-
-### Random Forest (scikit-learn example)
-
-A scikit-learn example implementing random forest classification and regression with `RandomForestClassifier` and `RandomForestRegressor`.
-
-Concepts covered:
-
-- Ensemble learning
-- Bagging
-- Feature importance
-- Hyperparameter tuning (`n_estimators`, `max_depth`)
-- Out-of-bag evaluation (when applicable)
-
-See `11-random-forest-sklearn/` for notebooks and example scripts.
-
-### Naive Bayes (scikit-learn example)
-
-A scikit-learn example demonstrating Naive Bayes classifiers, including Gaussian and multinomial variants where applicable.
-
-Concepts covered:
-
-- Bayes' theorem
-- Conditional independence assumption
-- Gaussian vs. multinomial vs. Bernoulli variants
-- Probabilistic predictions
-- Use cases and limitations
-
-See `12-naive-bayes-sklearn/` for notebooks and example scripts.
-
+ 
+Clustering implemented from scratch using NumPy, compared against scikit-learn's `KMeans`.
+ 
+Concepts covered: cluster initialization, Euclidean distance, assignment step, centroid update step, iterative convergence, inertia / clustering objective.
+ 
+### Random Forest (`11-random-forest-sklearn/`)
+ 
+Trains a `RandomForestClassifier` on the Wine Quality dataset to predict wine quality from physicochemical features (acidity, sulphates, alcohol, etc.).
+ 
+Concepts covered: ensemble learning, bagging, decision-tree aggregation, `n_estimators`.
+ 
+### Naive Bayes (`12-naive-bayes-sklearn/`)
+ 
+Trains `MultinomialNB` and `BernoulliNB` classifiers on an SMS spam dataset, using bag-of-words (`CountVectorizer`) features, and runs predictions on custom example messages.
+ 
+Concepts covered: Bayes' theorem, conditional independence assumption, multinomial vs. Bernoulli variants, text vectorization, confusion matrix, classification report.
+ 
+### Support Vector Machine (`13-svm-sklearn/`)
+ 
+Trains `SVC` (linear and RBF kernels) on a social-network-ads dataset (age, estimated salary) to predict purchase behavior, and visualizes the decision boundary.
+ 
+Concepts covered: maximum-margin classification, linear vs. RBF kernels, feature scaling, decision boundary visualization, accuracy scoring.
+ 
+### Principal Component Analysis (`14-pca-sklearn/`)
+ 
+Applies `PCA` to the Iris dataset to reduce four features down to two principal components for visualization.
+ 
+Concepts covered: dimensionality reduction, feature scaling (`StandardScaler`), explained variance ratio, 2D projection and visualization.
+ 
+### Gradient Boosting — XGBoost & LightGBM (`15-xgboost-lightgbm/`)
+ 
+Trains `XGBClassifier` and `LGBMClassifier` side by side on the Wine Quality dataset and compares their accuracy and classification reports.
+ 
+Concepts covered: gradient-boosted trees, `n_estimators`, `max_depth`, `learning_rate`, subsampling / column subsampling, model comparison.
+ 
+### DBSCAN (`16-dbscan-sklearn/`)
+ 
+Compares `KMeans` and `DBSCAN` on the same 2D dataset to show the difference between centroid-based and density-based clustering, including noise-point detection.
+ 
+Concepts covered: density-based clustering, `eps` and `min_samples`, noise points / outliers, cluster visualization.
+ 
 ## Repository Layout
-
+ 
 ```text
 Machine-Learning/
 │
@@ -175,83 +130,87 @@ Machine-Learning/
 │
 ├── 11-random-forest-sklearn/
 ├── 12-naive-bayes-sklearn/
-├── LICENSE
-├── README.md
-├── requirements.txt
-└── .gitignore
+├── 13-svm-sklearn/
+├── 14-pca-sklearn/
+├── 15-xgboost-lightgbm/
+├── 16-dbscan-sklearn/
+│
+└── README.md
 ```
-
+ 
+Each folder contains a `.py` script, a matching `.ipynb` notebook, and the CSV dataset it uses.
+ 
 ## Getting Started
-
-### 1. Create and activate a virtual environment
-
+ 
+### 1. Clone the repository
+ 
+```bash
+git clone https://github.com/yashasgaur/Machine-Learning.git
+cd Machine-Learning
+```
+ 
+### 2. Create and activate a virtual environment
+ 
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # macOS/Linux
 .venv\Scripts\activate     # Windows
 ```
-
-### 2. Install dependencies
-
+ 
+### 3. Install dependencies
+ 
+Each folder is self-contained; install the libraries it needs, for example:
+ 
 ```bash
-pip install -r requirements.txt
+pip install numpy pandas matplotlib scikit-learn xgboost lightgbm jupyter
 ```
-
-### 3. Run notebooks
-
+ 
+### 4. Run a notebook
+ 
 ```bash
 jupyter notebook
 ```
-
-Then open the notebook files in each algorithm folder.
-
-### 4. Run example scripts
-
+ 
+Then open the `.ipynb` file inside the algorithm folder you want to explore.
+ 
+### 5. Or run a script directly
+ 
 ```bash
-python 01-linear-regression-from-scratch/example.py
+cd 01-linear-regression-from-scratch
+python from_scratch.py
 ```
-
+ 
+(Script filenames vary slightly by folder — e.g. `from_scratch.py`, `using_sklearn.py`, `using-sklearn.py`, `from_sklearn.py`, `boosting.py` — check the folder for the exact name.)
+ 
 ## What You'll Learn
-
+ 
 This repository focuses on building a strong foundation in:
-
-- Supervised learning
-- Regression
-- Classification
-- Optimization
-- Gradient descent
-- Feature scaling
-- Model evaluation
-- Algorithmic thinking
-- Practical ML implementation
-
+ 
+- Supervised learning (regression & classification)
+- Unsupervised learning (clustering & dimensionality reduction)
+- Gradient descent and optimization
+- Ensemble methods and gradient boosting
+- Feature scaling and preprocessing
+- Model evaluation (accuracy, confusion matrix, precision/recall/F1)
+- Algorithmic thinking and practical ML implementation
 ## Roadmap
-
+ 
 Planned topics for this learning journey include:
-
-- Support Vector Machines
-- Principal Component Analysis
-- Gradient Boosting
-- Neural Networks
-
+ 
+- Neural networks (from scratch and with a deep learning framework)
+- Model deployment / serving an ML model as an API
 ## Contributing
-
+ 
 Contributions are welcome. If you want to:
-
+ 
 - Open an issue for a bug or enhancement
 - Suggest a new algorithm or improvement
-- Submit a pull request with tests and a short description
-
+- Submit a pull request with a short description
 Please follow the standard GitHub contribution workflow.
-
-## License
-
-This repository is released under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+ 
 ## Author / Contact
-
+ 
 **Author:** Yashas Gaur
-
+ 
 **GitHub:** https://github.com/yashasgaur
-
-If you'd like a resume blurb, LinkedIn link, or email added to the README, let me know and I can include it.
+ 
